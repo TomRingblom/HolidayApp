@@ -1,7 +1,7 @@
 import './App.css';
 import Map from './components/Map/Map';
 import Navbar from './components/Navbar/Navbar';
-import CountryDays from './components/CountryInfo/CountryDays/CountryDays';
+import CountryHolidaysList from './components/CountryInfo/CountryHolidays/CountryHolidaysList';
 import { useState } from 'react';
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
     <div className="App">
       <Navbar />
       {showMap && <Map onShowDays={showDaysHandler}/>}
-      {showDays && <CountryDays onDayInfo={dayInfo}/>}
+      {showDays && <CountryHolidaysList onDayInfo={dayInfo}/>}
     </div>
   );
 }
