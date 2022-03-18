@@ -1,0 +1,26 @@
+* {
+    font-family: Lato;
+}
+
+.item {
+    background-color: #52b788;
+    width: 99%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-bottom: 0.5em;
+}
+
+.header {
+    color: black;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info {
+    color: white;
+}
+
+.item:hover {
+    background-color: #25533d;
+}
