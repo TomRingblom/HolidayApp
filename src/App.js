@@ -17,12 +17,25 @@ function App() {
     const countryId = `${event.target.id}`;
     const countryInfo = await fetch(
       `https://date.nager.at/api/v3/publicholidays/2022/${countryId}`
+           
     );
-    const countryInfoJson = await countryInfo.json();
-    setDayInfo(countryInfoJson);
+    
+    
+    try {
+      const countryInfoJson = await countryInfo.json();
+      setDayInfo(countryInfoJson);
 
-    setShowMap(false);
-    setShowDays(true);
+      setShowMap(false);   
+      setShowDays(true);  
+    } catch (error) {
+      if(countryInfo.status === 404){
+        
+      }
+      else
+      console.log("Country is not yet implemented in the API.")
+      
+    }
+    
   };
 
   return (
