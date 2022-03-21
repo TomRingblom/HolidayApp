@@ -1,0 +1,10 @@
+.popup {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+}
+
+.flag {
+    width: 200px;
+    height: 100px;
+}
