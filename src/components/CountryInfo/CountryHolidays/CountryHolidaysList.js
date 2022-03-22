@@ -3,6 +3,7 @@ import Card from "../../UI/Card";
 import CountryHoliday from "./CountryHoliday";
 
 const CountryHolidaysList = (props) => {
+
   // console.log(props.onDayInfo);
   return (
     <Card>
@@ -10,6 +11,7 @@ const CountryHolidaysList = (props) => {
         <CountryHoliday key={day.localName} name={day.localName} date={day.date} />
         // <div key={days.date}>{days.localName}</div>
       ))}
+      
     </Card>
   );
 } 
