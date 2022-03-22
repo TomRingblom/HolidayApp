@@ -2,12 +2,12 @@ path:hover {
     
     fill: #1b4332;
     transition: .6s;   
-  stroke: #eb06c4;
-  stroke-width: 1px; 
+  stroke: linear-gradiant(to right, #c71e9d, red, orange,green);
+  stroke-width: 1.5px; 
   stroke-linejoin: round;
 }
 path {
-    stroke: #a10a88;
+    stroke: #050104;
     fill: #52b788;
     border: solid 1px black;
     
@@ -15,7 +15,9 @@ path {
 
 svg {
     width: 1100px;
-    height: 800px;
+    height: 690px;
+    border: 2px solid wheat;
+    margin-top: 25px;
 }
 
 
@@ -23,8 +25,4 @@ body {
     background-color:#001219;
 }
 
-/* path {
-    border: solid 1 black;
-    width: 50%;
-    height: 50%;
-} */
+
