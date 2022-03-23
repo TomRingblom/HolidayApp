@@ -3,17 +3,13 @@ import "./CountryHoliday.css"
 const CountryHoliday = (props) => {
 
   const saveDay = () => {
-    console.log(props);
     const key = Math.random().toString();
     const infoObject = {
       name: props.name,
       date: props.date
     }
     localStorage.setItem(key, JSON.stringify(infoObject));
-    
   }
-
-  console.log(props);
 
   return (
     <div className="item">
