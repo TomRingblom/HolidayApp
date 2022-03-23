@@ -1,17 +1,15 @@
 path:hover {
-    
-    fill: #1b4332;
-    transition: .6s;   
-    stroke: linear-gradiant(to right, #c71e9d, red, orange,green);
+    transition: 2s;
+    fill: #020002;   
+    stroke: rgb(151, 3, 3);
     stroke-width: 1.5px; 
     stroke-linejoin: round;
 }
 
 path {
-    stroke: #050104;
-    fill: #52b788;
-    border: solid 1px black;
-    
+    stroke: #02c051;
+    fill: #037e5970;
+    stroke-width: 1.5px; 
 }
 
 svg {
@@ -28,5 +26,4 @@ body {
 .must {
     display: flex;
     justify-content: end;
-    
 }

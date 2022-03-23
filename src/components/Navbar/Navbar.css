@@ -1,13 +1,16 @@
 .navbar {
-  height: 100%;
-  width: 200px;
-  position: fixed;
+ 
+  height: 70%;
+  width: 230px;
+  position: absolute;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;  border: 1px solid rgb(17, 27, 19);
+  border: 1px solid wheat;
+  
 }
 
 
@@ -15,7 +18,7 @@
 .navbar a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 23px;
   color: #be0909;
   display: block;
   background-color: rgb(51, 49, 53);
@@ -23,7 +26,6 @@
   text-align: left;
   border: 1px solid rgb(88, 6, 6);
   border-radius: 12px;
-  
   
 }
   
@@ -33,9 +35,25 @@
     
   }
   
+  @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: top;
+      display: block;
+    }
+  }
   
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .navbar {padding-top: 15px;}
+    .navbar a {font-size: 18px;}
   }
+  
+  .globe{
+    width: 200px;
+    height: 200px;
+    
+    border: 1px solid wheat;
+    
+  }
+
   
