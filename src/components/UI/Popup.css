@@ -1,8 +1,5 @@
-.popup {
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    border: 2px solid wheat;
+.popup { 
+    position: absolute;    
     margin-top: 25px;
     margin-right: 25px;
 }
@@ -10,4 +7,14 @@
 .flag {
     width: 200px;
     height: 100px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.test{
+    color: wheat;
+}
+
+#countryName{
+    font-size: larger;
+    margin-bottom: 3%;
 }
