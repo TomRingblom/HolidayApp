@@ -1,6 +1,5 @@
 .navbar {
- 
-  height: 70%;
+  height: 100%;
   width: 230px;
   position: absolute;
   z-index: 1;
@@ -9,11 +8,9 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 20px;  border: 1px solid rgb(17, 27, 19);
-  border: 1px solid wheat;
-  
+  border-right: 1px solid wheat;
+  border-left: 1px solid wheat; 
 }
-
-
 
 .navbar a {
   padding: 6px 6px 6px 32px;
@@ -25,8 +22,7 @@
   margin: 10%;
   text-align: left;
   border: 1px solid rgb(88, 6, 6);
-  border-radius: 12px;
-  
+  border-radius: 12px;  
 }
   
   .navbar a:hover {
@@ -50,10 +46,8 @@
   
   .globe{
     width: 200px;
-    height: 200px;
-    
-    border: 1px solid wheat;
-    
+    height: 200px;   
+    border: 1px solid wheat;   
   }
 
   

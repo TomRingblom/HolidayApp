@@ -11,11 +11,18 @@ const Map = (props) => {
   const showPopupHandler = (event) => {
     const countryId = event.target.id;
     const country = countries.find(x => x.cca2 === countryId);
-    setCountryFlag(country.flags.svg);
 
-    // const flagImage = await fetch(`https://restcountries.com/v3.1/alpha/${countryId}`);
-    // const flagImageToJson = await flagImage.json();
-    // setCountryFlag(flagImageToJson[0].flags.svg);
+    const popupCountry = {
+      flag: country.flags.png,
+      name: country.name.common,
+      currencies: Object.entries(Object.entries(country.currencies)[0][1])[0][1],
+      population: country.population,
+      capital: country.capital[0],
+      thumbnailFlag: country.flag
+    };
+
+    setCountryFlag(popupCountry);
+    console.log(country);
     setShowPopup(true);
   };
 
@@ -31,14 +38,14 @@ const Map = (props) => {
 
   return (
     <div className="map-size">
-      <div className="must">
-      {showPopup && <Popup countryImage={countryFlag} />}
+      <div className="flag-end">
+        {showPopup && <Popup countryImage={countryFlag} />}
       </div>
-      <svg 
-      onClick={props.onShowDays}
-      
-      mapsvggeoviewbox="-169.110266 83.600842 190.486279 -58.508473">
-        <path onMouseLeave={hidePopupHandler} onMouseEnter={showPopupHandler} 
+      <svg
+        onClick={props.onShowDays}
+
+        mapsvggeoviewbox="-169.110266 83.600842 190.486279 -58.508473">
+        <path onMouseLeave={hidePopupHandler} onMouseEnter={showPopupHandler}
           d="m 479.68275,331.6274 -0.077,0.025 -0.258,0.155 -0.147,0.054 -0.134,0.027 -0.105,-0.011 -0.058,-0.091 0.006,-0.139 -0.024,-0.124 -0.02,-0.067 0.038,-0.181 0.086,-0.097 0.119,-0.08 0.188,0.029 0.398,0.116 0.083,0.109 10e-4,0.072 -0.073,0.119 z"
           title="Andorra"
           id="AD"

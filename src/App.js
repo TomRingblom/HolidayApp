@@ -12,9 +12,6 @@ function App() {
   const [savedDays, setSavedDays] = useState(false);
   const [days,setDay] = useState([]);
 
-  // const showMapHandler = () => {
-  //   setShowMap(false);
-  // }
 
   const showDaysHandler = async (event) => {
     const countryId = `${event.target.id}`;
@@ -62,7 +59,8 @@ function App() {
     setDay(array);
     setShowMap(false);
     setShowDays(false);
-    setSavedDays(true);
+    setSavedDays(true); 
+    
   }
 
   return (
@@ -71,7 +69,7 @@ function App() {
       
       {showMap && <Map onShowDays={showDaysHandler}/>}
       {showDays && <CountryHolidaysList onDayInfo={dayInfo}/>}
-      {savedDays && <SavedDays onSaveDays={days}/>}
+      {savedDays && <SavedDays reloadList={savedDaysHandler} onSaveDays={days}/>}
 
 
     </div>

@@ -23,7 +23,7 @@ body {
     background-color:#001219;
 }
 
-.must {
+.flag-end {
     display: flex;
     justify-content: end;
 }
