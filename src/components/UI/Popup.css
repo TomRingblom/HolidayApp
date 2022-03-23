@@ -2,7 +2,9 @@
     width: 200px;
     height: 100px;
     position: absolute;
-      
+    border: 2px solid wheat;
+    margin-top: 25px;
+    margin-right: 25px;
 }
 
 .flag {

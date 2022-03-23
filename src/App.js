@@ -47,28 +47,22 @@ function App() {
 
   const savedDaysHandler = () => {
     const daysInLocal = JSON.stringify(localStorage);
-    const notesAsJSON = JSON.parse(daysInLocal);
+    const daysAsJson = JSON.parse(daysInLocal);
 
     const array = [];
 
-    for (let i of Object.keys(notesAsJSON)) {
-        const arrayItem = {id: i , info: notesAsJSON[i]}
-        const alex = JSON.parse(notesAsJSON[i]);
-        console.log(alex.name);
+    for (let i of Object.keys(daysAsJson)) {
+      const day = JSON.parse(daysAsJson[i]);
+      const arrayItem = {id: i, name: day.name, date: day.date }
       array.push(arrayItem);
     }
 
+    console.log(array);
+
     setDay(array);
-
-    
-
     setShowMap(false);
     setShowDays(false);
     setSavedDays(true);
-
-    // console.log(array);
-    // console.log("Hej" + notesAsJSON);
-
   }
 
   return (

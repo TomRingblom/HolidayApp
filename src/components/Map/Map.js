@@ -31,7 +31,9 @@ const Map = (props) => {
 
   return (
     <div className="map-size">
+      <div className="must">
       {showPopup && <Popup countryImage={countryFlag} />}
+      </div>
       <svg 
       onClick={props.onShowDays}
       

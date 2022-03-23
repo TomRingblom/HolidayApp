@@ -3,8 +3,6 @@ import Card from "../../UI/Card";
 import CountryHoliday from "./CountryHoliday";
 
 const CountryHolidaysList = (props) => {
-
-  // console.log(props.onDayInfo);
   return (
     <Card>
       {props.onDayInfo.map((day) => (

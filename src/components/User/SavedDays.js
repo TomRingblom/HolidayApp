@@ -1,21 +1,17 @@
-import "./SavedDays.css"
-import Card from "./../UI/Card";
+import "./SavedDays.css";
+import Card from "../UI/Card";
 
 
 
 const SavedDays = (props) => {
-    // console.log(props.onSaveDays);
-    // const test = JSON.parse(props.onSaveDays[0].info);
-    // console.log(test);
-
     return (
-        <>
+        <Card>
         <ul>
             {props.onSaveDays.map((x) => (
-                <div className="divSaveDay">{x.info}</div>
+                <div className="divSaveDay" key={x.id}>{x.name} {x.date}</div>
             ))}
         </ul>
-        </>
+        </Card>
     )
 }
 
