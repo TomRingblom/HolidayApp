@@ -4,33 +4,25 @@ import Map from '../Map/Map';
 import Navbar from '../Navbar/Navbar';
 import CountryHolidaysList from '../CountryInfo/CountryHolidays/CountryHolidaysList';
 import SavedDays from '../User/SavedDays';
+import useHttp from '../hooks/use-http';
 
 const Main = () => {
   const [showMap, setShowMap] = useState(true);
   const [showDays, setShowDays] = useState(false);
   const [dayInfo, setDayInfo] = useState([]);
   const [showSavedDays, setShowSavedDays] = useState(false);
+  
+  const resFunction = (obj) => {
+    setDayInfo(obj);
+  }
+
+  const { getRequest: getCountryById } = useHttp(`https://date.nager.at/api/v3/publicholidays/2022/`, resFunction);
 
   const showDaysHandler = async (event) => {
-    try {
-      const countryId = event.target.id;
-      const countryReq = await fetch(
-        `https://date.nager.at/api/v3/publicholidays/2022/${countryId}`
-      );
-      const countryRes = await countryReq.json();
-
-      if (!countryReq.ok) {
-        throw new Error("Country is not yet implemented in the API.");
-      }
-
-      setDayInfo(countryRes);
-
-      setShowMap(false);
-      setShowDays(true);
-      setShowSavedDays(false);
-    } catch (error) {
-      console.log(error.message);
-    }
+    getCountryById(event.target.id);
+    setShowMap(false);
+    setShowDays(true);
+    setShowSavedDays(false);
   };
 
   const showSavedDaysHandler = () => {
