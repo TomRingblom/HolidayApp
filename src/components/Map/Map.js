@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Popup from "../UI/Popup";
 import "./Map.css";
-
+import useHttp from "../hooks/use-http";
 
 const Map = (props) => {
   const [showPopup, setShowPopup] = useState(false);
@@ -29,14 +29,15 @@ const Map = (props) => {
     setShowPopup(false);
   };
 
+  const resFunction = useCallback((obj) => {
+    setCountries(obj);
+  }, []);
+
+  const { getRequest: getCountryInfo } = useHttp(resFunction);
+
   useEffect(() => {
-    async function fetchAllCountries() {
-      const res = await fetch('https://restcountries.com/v3.1/all');
-      const data = await res.json();
-      setCountries(data);
-    }
-    fetchAllCountries();
-  },[])
+    getCountryInfo({url: 'https://restcountries.com/v3.1/all', msg: 'Country information not found!'});
+  }, [getCountryInfo])
 
   return (
     <div className="map-size">
