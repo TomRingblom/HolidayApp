@@ -1,10 +1,12 @@
-const useHttp = (reqInfo, resData) => {
-    const getRequest = async (input) => {
+import { useCallback } from "react";
+
+const useHttp = (resData) => {
+    const getRequest = useCallback(async (reqInfo) => {
     try {
-      const req = await fetch(reqInfo + input, resData);
+      const req = await fetch(reqInfo.url, resData);
       
       if (!req.ok) {
-        throw new Error("error");
+        throw new Error(reqInfo.msg);
       }
 
       const res = await req.json();
@@ -13,7 +15,7 @@ const useHttp = (reqInfo, resData) => {
     } catch (error) {
       console.log(error.message);
     }
-  };
+  }, [resData]);
 
   return {
     getRequest

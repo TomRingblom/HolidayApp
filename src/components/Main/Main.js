@@ -1,5 +1,5 @@
 import '../../App.css';
-import { Fragment, useState } from 'react';
+import { Fragment, useCallback, useState } from 'react';
 import Map from '../Map/Map';
 import Navbar from '../Navbar/Navbar';
 import CountryHolidaysList from '../CountryInfo/CountryHolidays/CountryHolidaysList';
@@ -12,17 +12,19 @@ const Main = () => {
   const [dayInfo, setDayInfo] = useState([]);
   const [showSavedDays, setShowSavedDays] = useState(false);
   
-  const resFunction = (obj) => {
+  const resFunction = useCallback((obj) => {
     setDayInfo(obj);
-  }
+  },[]);
 
-  const { getRequest: getCountryById } = useHttp(`https://date.nager.at/api/v3/publicholidays/2022/`, resFunction);
+  const { getRequest: getCountryById } = useHttp(resFunction);
 
   const showDaysHandler = async (event) => {
-    getCountryById(event.target.id);
-    setShowMap(false);
-    setShowDays(true);
-    setShowSavedDays(false);
+    if(event.target.id !== "") {
+        getCountryById({url: `https://date.nager.at/api/v3/publicholidays/2022/${event.target.id}`, msg: 'Country is not yet implemented in the API.'});
+        setShowMap(false);
+        setShowDays(true);
+        setShowSavedDays(false);
+    }
   };
 
   const showSavedDaysHandler = () => {
