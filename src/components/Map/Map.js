@@ -22,7 +22,6 @@ const Map = (props) => {
     };
 
     setCountryFlag(popupCountry);
-    console.log(country);
     setShowPopup(true);
   };
 
