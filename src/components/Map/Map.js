@@ -9,7 +9,8 @@ const Map = (props) => {
   const [countryFlag, setCountryFlag] = useState('');
 
   const showPopupHandler = (event) => {
-    const countryId = event.target.id;
+    try {
+      const countryId = event.target.id;
     const country = countries.find(x => x.cca2 === countryId);
 
     const popupCountry = {
@@ -20,9 +21,14 @@ const Map = (props) => {
       capital: country.capital[0],
       thumbnailFlag: country.flag
     };
-
     setCountryFlag(popupCountry);
     setShowPopup(true);
+    } catch (error) {
+      
+    }
+    
+
+    
   };
 
   const hidePopupHandler = () => {
@@ -34,7 +40,7 @@ const Map = (props) => {
   }, []);
 
   const { getRequest: getCountryInfo } = useHttp(resFunction);
-
+  
   useEffect(() => {
     getCountryInfo({url: 'https://restcountries.com/v3.1/all', msg: 'Country information not found!'});
   }, [getCountryInfo])

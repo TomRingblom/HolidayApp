@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 
-const useHttp = (resData) => {
+const useHttp = (resData) =>  {
     const getRequest = useCallback(async (reqInfo) => {
     try {
       const req = await fetch(reqInfo.url, resData);
