@@ -1,36 +1,30 @@
 .navbar {
   height: 100%;
-  width: 230px;
-  position: absolute;
+  width: 15%;
+  position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;  border: 1px solid rgb(17, 27, 19);
-  border-right: 1px solid wheat;
-  border-left: 1px solid wheat; 
+  text-align: center;
+  font-size: 1.4em;
 }
 
 .navbar a {
-  padding: 6px 6px 6px 32px;
+  text-align: center;
   text-decoration: none;
-  font-size: 23px;
-  color: #be0909;
   display: block;
-  background-color: rgb(51, 49, 53);
-  margin: 10%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 3.5%;
   text-align: left;
-  border: 1px solid rgb(88, 6, 6);
-  border-radius: 12px;  
+  padding: 0.4em 0.1em 0.1em 2em;
 }
   
   .navbar a:hover {
-    color: #e91010;
-    transform: scale(1.1);
-    
+    transition: 0.3s;
+    font-weight: bolder;
   }
-  
+
   @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
@@ -45,9 +39,7 @@
   }
   
   .globe{
-    width: 200px;
-    height: 200px;   
-    border: 1px solid wheat;   
+    width: 100%;
   }
 
   

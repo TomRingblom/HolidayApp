@@ -9,7 +9,6 @@ const CountryHolidaysList = (props) => {
       {props.onDayInfo.length === 0 ? <span> This Countries Holidays are not yet implemented in the API</span> : 
       props.onDayInfo.map((day) => (              
         <CountryHoliday key={day.date} name={day.localName} date={day.date} />
-        
       ))}      
     </Card>
   );

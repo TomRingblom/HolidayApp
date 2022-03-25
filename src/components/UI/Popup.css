@@ -1,20 +1,14 @@
 .popup { 
     position: absolute;    
-    margin-top: 25px;
-    margin-right: 25px;
+    margin-top: 2%;
 }
 
 .flag {
-    width: 200px;
-    height: 100px;
-    border: 2px solid rgb(0, 0, 0);
-}
-
-.test{
-    color: wheat;
+    width: 13em;
+    height: 6.5em;
 }
 
 #countryName{
-    font-size: larger;
-    margin-bottom: 3%;
+    font-size: x-large;
+    margin-bottom: 2%;
 }

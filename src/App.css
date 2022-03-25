@@ -1,4 +1,143 @@
-.App {
+.färgSchema {
+  color: #232331;
+  color: #044230;
+  color: #eee0dc;
+  color: #708881;
+  color: #4e9881;
+}
+
+.färgschema2 {
+  color: #211f20;
+  color: #21fbfb;
+  color: #2fd3c2;
+  color: #f8449e;
+}
+
+.App{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  width: auto;
+  height: auto;
+}
+
+.färgschema3 {
+  color: #0a2540;
+  color: #0c2e4e;
+  color: #0de4e4;
+  color: #ffffff;
+  color: #0a2e4b;
+  color: #9966ff;
+  color: #fda856;
+  color: #7b91f8;
+  color: #00cffa;
+  color: #a5bdca;
+}
+
+body {
+  background-color:#0a2540;
+  color: #ffffff;
+}
+
+.main {
+  background-color: #0a2540;
+}
+
+.navbar {
+  background-color: #0c2e4e;
+  border-right: 0.01em inset #293f4b;
+}
+
+.navbar a {
+  color: #ffffff;
+  background-color: rgba(23, 91, 128, 0.4);
+  transition: 0.2s;
+  border: 0.01em solid #7b91f8;
+  border-radius: 0.1em;
+}
+
+.navbar a:hover {
+  background-color: #0de4e4;
+  border: 2px solid #0de4e4;
+  color: #0a2540;
+  transition: 0.5s;
+}
+
+path {
+  fill: #0c2e4e;
+  stroke: #0de4e4;
+  stroke-width: 0.07em;
+}
+
+path:hover {
+  fill: rgb(31, 30, 30);
+  stroke-width: 0.07em;
+  stroke-linejoin: round;
+}
+
+.flag {
+  box-shadow: 0.05em 0.05em #ffffff;
+}
+
+.flagText{
+  color: #ffffff;
+}
+
+.item {
+  background-color: #0c2e4e;
+  border: 0.1em solid #7b91f8;
+}
+
+.info {
+  color: #00cffa;
+}
+
+.btn-add-holiday {
+  background-color: #fda856;
+  color: #232331;
+  border: 2px solid #0a2540;
+}
+
+.btn-add-holiday:hover {
+  transition: 0.1s;
+  background-color: #00cffa;
+}
+
+.header {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +174,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
