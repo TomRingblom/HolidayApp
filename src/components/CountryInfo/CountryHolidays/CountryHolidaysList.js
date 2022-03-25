@@ -8,7 +8,6 @@ const CountryHolidaysList = (props) => {
       {props.onDayInfo.map((day) => (
         <CountryHoliday key={day.localName} name={day.localName} date={day.date} />
       ))}
-      
     </Card>
   );
 } 
