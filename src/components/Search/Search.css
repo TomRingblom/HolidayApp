@@ -1,0 +1,16 @@
+
+
+.country-box{
+    font-size: larger;
+    border: 1px solid black;
+    background-color: rgb(73, 73, 73);
+    margin: 1%;
+    color: aqua;
+}
+
+.country-search-button{
+    margin-left: 10px;
+    background-color: rgb(59, 1, 56);
+    color:white ;
+    border-radius: 25%;
+}
