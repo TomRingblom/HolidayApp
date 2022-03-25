@@ -1,5 +1,5 @@
 import "./CountryHoliday.css"
-import { VscAdd } from "react-icons/vsc"
+
 
 const CountryHoliday = (props) => {
 
