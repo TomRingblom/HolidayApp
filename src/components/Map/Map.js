@@ -45,6 +45,9 @@ const Map = (props) => {
         {showPopup && <Popup countryImage={countryFlag} />}
       </div>
       <svg
+        
+        
+
         onClick={props.onShowDays}
 
         mapsvggeoviewbox="-169.110266 83.600842 190.486279 -58.508473">
