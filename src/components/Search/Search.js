@@ -1,6 +1,7 @@
 import { useState,useCallback,useEffect } from "react";
 import "./Search.css";
 import useHttp from "../hooks/use-http";
+import Card from "../UI/Card";
 
 
 const Search = (props) => {
@@ -22,18 +23,17 @@ const Search = (props) => {
       }, [getCountryInfo])
     
     return (
-        <div>
-            <input type="text" onChange={e => setQuery(e.target.value.toLocaleLowerCase())}></input>
-            <div className="country-card">
+        <Card>
+            <input className="searchCountry" type="text" onChange={e => setQuery(e.target.value.toLocaleLowerCase())}></input>
                 {filteredCountry.slice(0, 10).map((value) =>(
-                    <div className="country-box" key={value.name.common}>{value.name.common} <button className="country-search-button" id={value.cca2} onClick={props.onShowDays}>See Country Holidays</button>
+                    <div className="item" key={value.name.common}>
+                    <h1 className="header">{value.name.common}</h1>
+                    <div>
+                        <button className="btn-see-country-holidays" id={value.cca2} onClick={props.onShowDays}>See Country Holidays</button>
                     </div>
-
-                ))};
-
-            </div>
-        </div>
-
+                </div>
+                ))}
+        </Card>
     )
 
 }
