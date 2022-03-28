@@ -27,8 +27,14 @@ const SavedDays = () => {
     
     return (
         <Card>
-            {savedDays.map((x) => (
-                <div className="divSaveDay" key={x.id}>{x.name} {x.date} <button value={x.id} onClick={removeDay}>REMOVE</button></div>
+            {savedDays.map((props) => (
+                <div className="item" key={props.id}>
+                    <h1 className="header">{props.name}</h1>
+                    <div>
+                        <span className="info">{props.date}</span>
+                        <button className="btn-add-holiday" value={props.id} onClick={removeDay}>➖</button>
+                    </div>
+                </div>
             ))}
         </Card>
     )
