@@ -86,10 +86,11 @@ path:hover {
 .item {
   background-color: #0c2e4e;
   border: 0.1em solid #7b91f8;
+  color: #ffffff;
 }
 
 .info {
-  color: #00cffa;
+  color: #ffffff;
 }
 
 .btn-add-holiday {
@@ -101,6 +102,19 @@ path:hover {
 .btn-add-holiday:hover {
   transition: 0.1s;
   background-color: #00cffa;
+}
+
+.btn-see-country-holidays {
+  color: #00cffa;
+  background-color: rgba(23, 91, 128, 0.4);
+  border: 0.01em solid #fda856;
+  transition: 0.1s;
+}
+
+.btn-see-country-holidays:hover {
+  transition: 0.1s;
+  background-color: #0de4e4;
+  color: #0a2540;
 }
 
 .header {
