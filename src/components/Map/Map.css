@@ -7,10 +7,21 @@ svg {
     padding-right: 4em;
     padding-bottom: 1em;
     border:0.1em solid #fda856;
+    animation-name: mapAnimation;
 }
 
 .flag-end {
     position: absolute;
-    margin-left: 49%;
+    margin-left: 52.5%;
     margin-top: 0.2%;
+}
+
+@keyframes mapAnimation {
+    from {margin-left: 3000px;}
+    to {margin-left: 2%;}
+}
+
+svg {
+    animation-name: mapAnimation;
+    animation-duration: 0.5s;
 }
