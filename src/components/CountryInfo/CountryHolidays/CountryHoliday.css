@@ -34,4 +34,16 @@
 
 .btn-add-holiday:hover {
     transition: 0.1s;
+    
+}
+
+.hidden-checkbox{
+    display: none;
+    
+    font:bold;
+}
+
+.btn-add-holiday:focus +.hidden-checkbox{
+    display: block;
+    
 }
